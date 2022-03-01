@@ -1,6 +1,6 @@
 # Lab 3: Peter Balušík
 ## 1. I/O schematic
-![image](img1.png)
+![image](img1.PNG)
 ## 2. Table of connetions
 | **LED** | **Pin** |**Switch**| **Pin** |
 | :-: | :-: | :-: | :-: |
