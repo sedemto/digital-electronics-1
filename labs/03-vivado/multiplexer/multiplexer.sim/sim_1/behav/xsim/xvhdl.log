@@ -1,0 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xbalus02/digital-electronics-1/labs/03-vivado/multiplexer/multiplexer.srcs/sim_1/new/tb_mux_3bit_4to1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_comparator_4bit'
+ERROR: [VRFC 10-2987] 'comparator_4bit' is not compiled in library 'xil_defaultlib' [D:/Documents/xbalus02/digital-electronics-1/labs/03-vivado/multiplexer/multiplexer.srcs/sim_1/new/tb_mux_3bit_4to1.vhd:38]
+ERROR: [VRFC 10-3782] unit 'testbench' ignored due to previous errors [D:/Documents/xbalus02/digital-electronics-1/labs/03-vivado/multiplexer/multiplexer.srcs/sim_1/new/tb_mux_3bit_4to1.vhd:25]
+INFO: [VRFC 10-3070] VHDL file 'D:/Documents/xbalus02/digital-electronics-1/labs/03-vivado/multiplexer/multiplexer.srcs/sim_1/new/tb_mux_3bit_4to1.vhd' ignored due to errors
