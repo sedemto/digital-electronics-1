@@ -1,6 +1,6 @@
 ------------------------------------------------------------
 --
--- Testbench for 4-bit binary comparator.
+-- Testbench for mux_3bit_4to1.
 -- EDA Playground
 --
 -- Copyright (c) 2020-Present Tomas Fryza
@@ -15,9 +15,9 @@ use ieee.std_logic_1164.all;
 ------------------------------------------------------------
 -- Entity declaration for testbench
 ------------------------------------------------------------
-entity mux_3bit_4to1 is
+entity tb_mux_3bit_4to1 is
     -- Entity of testbench is always empty
-end entity mux_3bit_4to1;
+end entity tb_mux_3bit_4to1;
 
 ------------------------------------------------------------
 -- Architecture body for testbench
@@ -33,7 +33,7 @@ architecture testbench of tb_mux_3bit_4to1 is
     signal s_f           : std_logic_vector(3 - 1 downto 0);
 
 begin
-    -- Connecting testbench signals with comparator_4bit
+    -- Connecting testbench signals with mux_3bit_4to1
     -- entity (Unit Under Test)
     uut_mux_3bit_4to1 : entity work.mux_3bit_4to1
         port map(
@@ -54,7 +54,7 @@ begin
         report "Stimulus process started" severity note;
         
         -- First test case ...
-        s_a <= "100"; s_b <= "101"; s_c <= "110"; s_d <= "111"; wait for 100 ns;
+        s_a <= "100"; s_b <= "101"; s_c <= "110"; s_d <= "111";
         
         s_sel <= "00"; wait for 100 ns;
         s_sel <= "01"; wait for 100 ns;
@@ -68,8 +68,6 @@ begin
         -- If true, then do not report anything
         --report "Input combination 0011, 0001 FAILED" severity error;
 
-
-        -- WRITE OTHER TEST CASES HERE
 
 
 
