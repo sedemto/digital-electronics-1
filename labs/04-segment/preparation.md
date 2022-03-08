@@ -1,3 +1,4 @@
+ Complete the decoder truth table for **common anode** 7-segment display.
  | **Hex** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
    | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
    | 0 | 0000 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
