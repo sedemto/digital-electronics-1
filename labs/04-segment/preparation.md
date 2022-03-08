@@ -1,6 +1,6 @@
 # Lab 4: Peter Balušík
 ## 1. Schematic
-![image](img1.PNG)
+![image](img1.png)
 ## 2. Table
 Complete the decoder truth table for **common anode** 7-segment display.
 | **Hex** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
