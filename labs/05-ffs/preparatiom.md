@@ -27,5 +27,5 @@
    | :-: | :-: | :-: | :-: | :-- |
    | ![rising](arrow.png) | 0 | 0 | 0 | No change |
    | ![rising](arrow.png) | 0 | 1 | 1 | No change |
-   | ![rising](arrow.png) | 1 | 0 | 1 | Invert |
-   | ![rising](arrow.png) | 1 | 1 | 0 | Invert |
+   | ![rising](arrow.png) | 1 | 0 | 1 | Toggle |
+   | ![rising](arrow.png) | 1 | 1 | 0 | Toggle |
