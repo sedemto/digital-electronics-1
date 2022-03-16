@@ -86,9 +86,6 @@ begin
         s_data <='1'; wait for 13 ns;
         s_data <='0'; wait for 26 ns;
         s_data <='1'; wait for 26 ns;
-        s_data <='0'; wait for 39 ns;
-        s_data <='1'; wait for 39 ns;
-        -- DEFINE YOUR INPUT DATA HERE
 
         report "Stimulus process finished" severity note;
         wait;

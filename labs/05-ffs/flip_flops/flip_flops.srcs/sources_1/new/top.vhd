@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity top is
     Port ( CLK100MHz : in STD_LOGIC;
            BTNC      : in STD_LOGIC;
-           SW        : in STD_LOGIC_VECTOR (1 - 1 downto 0);
+           SW        : in STD_LOGIC;
            LED       : out STD_LOGIC_VECTOR (4 - 1 downto 0));
 end top;
 
@@ -57,8 +57,9 @@ begin
       port map(
           clk   => CLK100MHZ,
           rst   => BTNC,
-          d    => SW,
-          q     => s_ff0
+          d     => SW,
+          q     => s_ff0,
+          q_bar => open
       );
 
   d_ff_1 : entity work.d_ff_rst
@@ -66,8 +67,8 @@ begin
           clk   => CLK100MHZ,
           rst   => BTNC,
           d     => s_ff0,
-          q     => s_ff1
-
+          q     => s_ff1,
+          q_bar => open
       );
 
   d_ff_2 : entity work.d_ff_rst
@@ -75,7 +76,8 @@ begin
           clk   => CLK100MHZ,
           rst   => BTNC,
           d     => s_ff1,
-          q     => s_ff2
+          q     => s_ff2,
+          q_bar => open
 
       );
   d_ff_3 : entity work.d_ff_rst
@@ -83,8 +85,13 @@ begin
           clk   => CLK100MHZ,
           rst   => BTNC,
           d     => s_ff2,
-          q     => s_ff3
+          q     => s_ff3,
+          q_bar => open
 
       );
+LED(0) <= s_ff0;
+LED(1) <= s_ff1;
+LED(2) <= s_ff2;
+LED(3) <= s_ff3;
 
 end architecture Behavioral;
