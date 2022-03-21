@@ -8,7 +8,7 @@
 architecture Behavioral of t_ff_rst is
     -- It must use this local signal instead of output ports
     -- because "out" ports cannot be read within the architecture
-    signal s_q : std_logic;
+    signal q_n : std_logic;
 begin
     --------------------------------------------------------
     -- p_t_ff_rst:
@@ -20,16 +20,18 @@ begin
     --------------------------------------------------------
     p_t_ff_rst : process(clk)
     begin
-        if rising_edge(clk) then
-
-        -- WRITE YOUR CODE HERE
-
+         if rising_edge(clk) then  -- Synchronous process
+            if (rst = '1') then
+                q     <= '0';
+                q_bar <= '1';
+                q_n   <= '0';
+            else
+                q_n   <= ((not t) and q_n) or (t and (not q_n));
+                q     <= q_n;
+                q_bar <= not q_n;
+            end if;
         end if;
     end process p_t_ff_rst;
-
-    -- Output ports are permanently connected to local signal
-    q     <= s_q;
-    q_bar <= not s_q;
 end architecture Behavioral;
 ```
 
