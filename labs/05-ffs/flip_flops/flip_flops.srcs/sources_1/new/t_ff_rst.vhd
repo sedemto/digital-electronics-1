@@ -56,9 +56,9 @@ begin
             if (rst = '1') then
                 q     <= '0';
                 q_bar <= '1';
-                q_n <= '0';
+                q_n   <= '0';
             else
-                q_n <= ((not t) and q_n) or (t and (not q_n));
+                q_n   <= ((not t) and q_n) or (t and (not q_n));
                 q     <= q_n;
                 q_bar <= not q_n;
             end if;
