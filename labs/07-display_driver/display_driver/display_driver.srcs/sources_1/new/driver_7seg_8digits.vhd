@@ -126,41 +126,41 @@ begin
             if (reset = '1') then
                 s_hex <= data0_i;
                 dp_o  <= dp_i(0);
-                dig_o <= "1110";
+                dig_o <= "11111110";
             else
                 case s_cnt is
                     when "111" => --7
                         s_hex <= data7_i;
                         dp_o  <= dp_i(7);
-                        dig_o <= "";
+                        dig_o <= "01111111";
                     when "110" => --6
                         s_hex <= data6_i;
                         dp_o  <= dp_i(6);
-                        dig_o <= "";
+                        dig_o <= "10111111";
                     when "101" => --5
                         s_hex <= data5_i;
                         dp_o  <= dp_i(5);
-                        dig_o <= "";
+                        dig_o <= "11011111";
                     when "100" => --4
                         s_hex <= data4_i;
                         dp_o  <= dp_i(4);
-                        dig_o <= "";
+                        dig_o <= "11101111";
                     when "011" => --3
                         s_hex <= data3_i;
                         dp_o  <= dp_i(3);
-                        dig_o <= "";
+                        dig_o <= "11110111";
                     when "010" => --2
                         s_hex <= data2_i;
                         dp_o  <= dp_i(2);
-                        dig_o <= "";
+                        dig_o <= "11111011";
                     when "001" => --1
                         s_hex <= data1_i;
                         dp_o  <= dp_i(1);
-                        dig_o <= "";
+                        dig_o <= "11111101";
                     when others =>
                         s_hex <= data0_i;
                         dp_o  <= dp_i(0);
-                        dig_o <= "";
+                        dig_o <= "11111110";
                 end case;
             end if;
         end if;
