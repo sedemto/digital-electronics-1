@@ -43,7 +43,7 @@
 
                      when WEST_GO =>
                         if (s_cnt < c_DELAY_4SEC) then
-                            s_cnt <= s_cnt + 4;
+                            s_cnt <= s_cnt + 1;
                         else
                             -- Move to the next state
                             s_state <= WEST_WAIT;
@@ -53,7 +53,7 @@
                         
                     when WEST_WAIT =>
                         if (s_cnt < c_DELAY_2SEC) then
-                            s_cnt <= s_cnt + 2;
+                            s_cnt <= s_cnt + 1;
                         else
                             -- Move to the next state
                             s_state <= STOP2;
@@ -73,7 +73,7 @@
                         
                      when SOUTH_GO =>
                         if (s_cnt < c_DELAY_4SEC) then
-                            s_cnt <= s_cnt + 4;
+                            s_cnt <= s_cnt + 1;
                         else
                             -- Move to the next state
                             s_state <= SOUTH_WAIT;
@@ -83,7 +83,7 @@
                         
                     when SOUTH_WAIT =>
                         if (s_cnt < c_DELAY_2SEC) then
-                            s_cnt <= s_cnt + 2;
+                            s_cnt <= s_cnt + 1;
                         else
                             -- Move to the next state
                             s_state <= STOP1;
